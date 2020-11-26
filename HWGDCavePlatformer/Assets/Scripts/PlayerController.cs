@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float jumpForce = 5;
     bool canJump = true;
-    Ray jumpRay;
+    public float rayDistance = 0.7f;
 
     LayerMask platformLayer;
     
@@ -28,19 +28,8 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        Debug.DrawRay(transform.position, Vector3.down * 10, Color.red);
 
-    }
-
-    private void FixedUpdate()
-    {
-        jumpRay.origin = transform.position; // What's wrong with this?
-        jumpRay.direction = Vector3.down;
-        if (Physics.Raycast(jumpRay, 10f, platformLayer))
-        {
-            canJump = true;
-            Debug.Log("I can jump!");
-        }
+        canJump = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, platformLayer);
     }
 
     void Jump()
