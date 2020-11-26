@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 837847559}
   - component: {fileID: 837847558}
   - component: {fileID: 837847557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 1300761671}
   - component: {fileID: 1300761670}
   - component: {fileID: 1300761669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
