@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+        Debug.DrawRay(transform.position, Vector3.down * 10, Color.red);
+
     }
 
     private void FixedUpdate()
