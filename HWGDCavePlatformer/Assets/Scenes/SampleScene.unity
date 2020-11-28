@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
   speed: 5
-  jumpForce: 15
+  jumpForce: 14.4
   rayDistance: 0.7
 --- !u!212 &1653168643
 SpriteRenderer:
