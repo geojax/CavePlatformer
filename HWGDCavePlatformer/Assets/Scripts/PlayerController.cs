@@ -36,6 +36,11 @@ public class PlayerController : MonoBehaviour
             //rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y - 3f);
             rb2d.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
         }
+
+        if (rb2d.position.y < -15f)
+        {
+            rb2d.position = new Vector2(-6.89f, 15f);
+        }
     }
 
     void Jump()
