@@ -30,13 +30,17 @@ public class PlayerController : MonoBehaviour
         }
 
         canJump = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, platformLayer);
+
+        if ((Input.GetKeyUp("w") || Input.GetKeyUp("up")) && rb2d.velocity.y > 0f)
+        {
+            //rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y - 3f);
+            rb2d.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
+        }
     }
 
     void Jump()
     {
-        //rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
-        Debug.Log("jumped!");
         canJump = false;
     }
 }
