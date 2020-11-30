@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
 
         if ((Input.GetKeyUp("w") || Input.GetKeyUp("up")) && rb2d.velocity.y > 0f)
         {
-            //rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y - 3f);
             rb2d.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
         }
 
