@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
             Jump();
         }
 
-        canJump = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, platformLayer);
+        canJump = Physics2D.BoxCast(transform.position, transform.localScale, 0, Vector2.down, rayDistance, platformLayer);
 
         if ((Input.GetKeyUp("w") || Input.GetKeyUp("up")) && rb2d.velocity.y > 0f)
         {
